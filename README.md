@@ -12,7 +12,8 @@ source .venv/bin/activate
 python3 -m pip install -r requirements.txt  
 cdk bootstrap aws://<account-id>/<region>  
 cdk synth   
-cdk deploy all```
+cdk deploy all
+```
 
 Inspector will run daily, or you can run it on demand.
 
