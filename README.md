@@ -2,8 +2,8 @@
 
 ## Parse Inspector Results Using CDK
 
-Howto Install:
-If needed, export your AWS profile:
+Howto Install:  
+If needed, export your AWS profile:  
 `export AWS_PROFILE=profile_name`
 
 Create a virtual environment and launch the stacks:
@@ -16,10 +16,10 @@ cdk deploy all`
 
 Inspector will run daily, or you can run it on demand.
 
-Optional:
-For use with Datadog:
-Set the ENABLE_DD to 1 in app.py
-Install the Datadog Forwarder in the region you want to deploy:
+> Optional:  
+For use with Datadog:  
+Set the ENABLE_DD to 1 in app.py. 
+Install the Datadog Forwarder in the region you want to deploy:  
 <https://docs.datadoghq.com/serverless/forwarder/>
 
 (c) Copyright 2020 - NickTheSecurityDude
