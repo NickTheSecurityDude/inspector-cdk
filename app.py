@@ -20,7 +20,7 @@
 from aws_cdk import core
 
 # Datadog forwarder flag
-ENABLE_DD=1
+ENABLE_DD=0
 
 if ENABLE_DD==1:
   from stacks.dd_sns_stack import getDatadogLambdaFunction
