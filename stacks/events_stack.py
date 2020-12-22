@@ -27,7 +27,7 @@ class EventsStack(core.Stack):
     # add cloudwatch cron
     events_rule=events.Rule(self,"InspectorCronRule",
       description="Inspector Template Events Cron Rule",
-      rule_name="inspector-template-assessment",
+      rule_name="inspector-assessment-template",
       schedule=events.Schedule.cron(minute="0",hour="15")
     )
 
