@@ -59,7 +59,7 @@ class SNSStack(core.Stack):
       }
     )
 
-    topic=sns.Topic(self,"Inspector Topic",
+    topic=sns.Topic(self,"InspectorTopic",
       topic_name="inspector-topic"
     )
 
@@ -79,18 +79,11 @@ class SNSStack(core.Stack):
 
     self._inspector_topic_arn=topic.topic_arn
 
-    #check if Inspector Lambda SNS topic exixts
-    if checkTopicExists(f"arn:aws:sns:{self._region}:{self._account}:LambdaInsSNSTopic"):
-      #print("SNS Topic Found - 2")
-      li_topic=sns.Topic.from_topic_arn(self,"Lambda Ins SNS Topic",
-        topic_arn=f"arn:aws:sns:{self._region}:{self._account}:LambdaInsSNSTopic"
-      )
-    else:
-      #print("SNS Topic NOT Found - 2")
-      li_topic=sns.Topic(self, "Lambda Ins SNS Topic",
-        topic_name="LambdaInsSNSTopic"
-      )
-    
+    #create Inspector Lambda SNS topic exixts
+    li_topic=sns.Topic(self, "Lambda Ins SNS Topic",
+      topic_name="LambdaInsSNSTopic"
+    )
+
     li_topic.add_to_resource_policy(
       statement=iam.PolicyStatement(
         actions=["SNS:Publish"],
