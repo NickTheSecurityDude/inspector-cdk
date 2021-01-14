@@ -18,12 +18,6 @@ cdk deploy --all
 
 Inspector will run daily, or you can run it on demand.
 
-## Optional:  
-> For use with Datadog:  
-Set the ENABLE_DD to 1 in app.py. 
-Install the Datadog Forwarder in the region you want to deploy:  
-<https://docs.datadoghq.com/serverless/forwarder/>
-
 (c) Copyright 2020 - NickTheSecurityDude
 
 Disclaimer:  
